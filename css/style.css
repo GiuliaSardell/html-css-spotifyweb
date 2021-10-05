@@ -7,6 +7,7 @@
 body{
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
+  font-weight: bold;
 }
 
 header{
@@ -66,7 +67,7 @@ aside{
   padding-left: 10px;
   padding-top: 10px;
   color: #414141;
-  font-weight: bold;
+  
 }
 
 aside ul li img{
@@ -151,11 +152,30 @@ footer{
   justify-content: space-between;
   height: 80px;
   background-color: #282828;
+  color: white;
 }
 
 .footer-left{
-  background-color: red;
+  display: flex;
+  align-items: center;
 }
+
+.footer-left img{
+  height: 50px;
+  margin: 0 10px;
+}
+
+.subtitle{
+  font-size: 10px;
+  color: #414141;
+}
+
+footer i{
+  color: #414141;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
 
 .footer-central{
   background-color: blue;
