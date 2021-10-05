@@ -179,14 +179,18 @@ footer i{
 }
 
 /* **************FOOTER-CENTRAL*********** */
-/* .footer-central{
-  background-color: blue;
-} */
+.footer-central{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10px;
+}
 
 .footer-central-top ul{
   display: flex;
   align-items: baseline;
 }
+
 .footer-central-top ul li i{
   font-size: 20px;
   margin: 20px ;
@@ -199,17 +203,34 @@ footer i{
 
 .footer-central-down{
   display: flex;
-
+  align-items: center;
 }
 
 .riprod-line{
   height: 2px;
-  width: 240px;
+  width: 200px;
   background-color: white;
+  margin: 0 20px 5px 20px;
+}
+
+
+/* ********footer right*************** */
+
+.footer-right i{
+  color: white;
+  cursor: pointer;
 }
 
 .footer-right{
-  background-color: pink;
+  display: flex;
+  align-items: center;
+}
+
+.footer-right .riprod-line{
+  width: 70px;
+  margin: 10px;
+  
+ 
 }
 
 
