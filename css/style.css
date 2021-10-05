@@ -86,6 +86,10 @@ aside li:hover, .aside-bottom>:first-child:hover{
   color: white;
 }
 
+.home{
+  border-left: 2px solid green;
+}
+
 .aside-central{
   overflow: auto;
   height: 50%;
@@ -94,7 +98,6 @@ aside li:hover, .aside-bottom>:first-child:hover{
 .playlist-aside{
   text-transform: uppercase;
   color: white;
-  /* font-weight: bold; */
 }
 
 .aside-central ul li {
@@ -120,9 +123,7 @@ aside li:hover, .aside-bottom>:first-child:hover{
   color: white;
 }
 
-.aside-bottom{
-  margin-top: 50%;
-}
+
 .aside-bottom img{
   filter: opacity(0.5);
   width: 20px;
@@ -143,20 +144,34 @@ aside li:hover, .aside-bottom>:first-child:hover{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+/* ***************************FOOTER*********** */
 footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   height: 80px;
-  background-color: green;
-  
+  background-color: #282828;
 }
+
+.footer-left{
+  background-color: red;
+}
+
+.footer-central{
+  background-color: blue;
+}
+
+.footer-right{
+  background-color: pink;
+}
+
+
+
+
+
+
+
+
+
+
+
