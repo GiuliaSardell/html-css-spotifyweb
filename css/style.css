@@ -155,6 +155,8 @@ footer{
   color: white;
 }
 
+
+/* **************FOOTER-LEFT*********** */
 .footer-left{
   display: flex;
   align-items: center;
@@ -176,9 +178,34 @@ footer i{
   margin-left: 10px;
 }
 
-
-.footer-central{
+/* **************FOOTER-CENTRAL*********** */
+/* .footer-central{
   background-color: blue;
+} */
+
+.footer-central-top ul{
+  display: flex;
+  align-items: baseline;
+}
+.footer-central-top ul li i{
+  font-size: 20px;
+  margin: 20px ;
+  color: white;
+}
+
+.footer-central-top ul li .play{
+  font-size: 30px;
+}
+
+.footer-central-down{
+  display: flex;
+
+}
+
+.riprod-line{
+  height: 2px;
+  width: 240px;
+  background-color: white;
 }
 
 .footer-right{
