@@ -10,7 +10,7 @@ body{
 }
 
 header{
-  height: 80px;
+  height: 50px;
   background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: space-between;
@@ -19,16 +19,16 @@ header{
 
 
 .logo{
-  height: 80px;
+  height: 50px;
   width: 200px;
   background-color: black;
 }
 
 .logo img{
-  width: 70%;
+  width: 60%;
   margin-left: 20px;
   cursor: pointer;
-  height: 80px;
+  height: 50px;
 }
 
 .upgrade a{
@@ -47,48 +47,58 @@ header{
   margin-right: 19px;
 }
 
+main{
+  height: calc(100vh - 130px);
+  /* width: calc(100% - 200px); */
+  background-color:  #141922;
+}
 /* *******************************ASIDE************ */
 
+ul{
+  list-style: none;
+  cursor: pointer;
+}
+
 aside{
-  /* position: fixed;
-  z-index: 500; */
   background-color: black;
   width: 200px;
-  height: calc(100vh - 160px);
+  height: calc(100vh - 130px);
   padding-left: 10px;
+  padding-top: 10px;
+  color: #414141;
+  font-weight: bold;
 }
 
 aside ul li img{
   width: 30px;
   height: 30px;
+  margin-top: 5px;
   vertical-align: middle;
   filter: opacity(0.5);
 }
-aside li:hover img{
+
+aside li:hover img,
+.aside-bottom>:first-child:hover img{
   filter: none;
 }
 
-aside li{
-  color: #414141;
-  padding: 5px;
-  font-weight: bold;
-}
-aside li:hover{
+aside li:hover, .aside-bottom>:first-child:hover{
   color: white;
 }
 
 .aside-central{
+  overflow: auto;
+  height: 50%;
   margin-top: 20px;
-  margin-left: 5px;
 }
 .playlist-aside{
   text-transform: uppercase;
   color: white;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .aside-central ul li {
-  padding: 10px;
+  padding: 5px 0;
 }
 
 .select i{
@@ -99,7 +109,36 @@ aside li:hover{
 
 .select{
   line-height: 30px;
-  ;
+}
+
+.user{
+  background-color: grey;
+  border-radius: 50%;
+}
+
+.john{
+  color: white;
+}
+
+.aside-bottom{
+  margin-top: 50%;
+}
+.aside-bottom img{
+  filter: opacity(0.5);
+  width: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.aside-bottom span{
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.line{
+  height: 5px;
+  border-bottom: 1px solid;
+  margin: 10px 10px 10px 0;
 }
 
 
@@ -107,11 +146,6 @@ aside li:hover{
 
 
 
-main{
-  height: calc(100vh - 160px);
-  /* width: calc(100% - 200px); */
-  background-color:  #141922;
-}
 
 
 
