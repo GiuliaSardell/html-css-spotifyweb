@@ -30,6 +30,7 @@ body{
   top: 0;
   right: 0;
   z-index: 500;
+  display: hidden;
   width: calc(100% - 200px);
   height: 50px;
   text-align: right;
@@ -47,15 +48,16 @@ body{
   border-radius: 35px;
   padding: 10px 25px;
   margin-right: 20px;
+  transition: padding 0.2s ease;
 }
 
 .upgrade a:hover{
-  font-size: 15px;
-  padding: 11px 26px;
+  padding: 12px 27px;
   margin-right: 19px;
 }
 
 main{
+  overflow: hidden;
   height: calc(100vh - 80px);
   width: 100%;
   background-color:  #141922;
@@ -135,9 +137,11 @@ ul li:hover, .aside-bottom>:first-child:hover{
   color: white;
 }
 
-.aside-central ul li {
+.playlist-aside ul li {
   padding: 5px 0;
 }
+
+
 
 .select i{
   font-size: 40px;
@@ -158,10 +162,10 @@ ul li:hover, .aside-bottom>:first-child:hover{
   color: white;
 }
 
-.aside-top-central{
+/* .aside-top-central{
   height: calc(100% - 80px);
   min-height: 430px;
-}
+} */
 
 .aside-bottom{
   overflow: hidden;
@@ -187,6 +191,20 @@ ul li:hover, .aside-bottom>:first-child:hover{
 }
 
 /* ***********************content-music************** */
+
+.content-music{
+  overflow: auto;
+  height: 100%;
+  width: 100vw;
+
+}
+
+.title-content-music{
+  overflow: hidden;
+  height: 85px;
+  width: calc(100vw - 200px);
+}
+
 .content-music ul li{
   padding-top: 50px;
   text-transform: uppercase;
@@ -209,25 +227,103 @@ ul li:hover, .aside-bottom>:first-child:hover{
 }
 
 /* **************row**************** */
+.row{
+  margin: 10px 20px;
+}
+
 .row p{
   font-size: 20px;
   color: white;
-  margin: 10px;
+  margin: 20px 0;
 }
 
-.img-album img{
-  width: 200px;
+.row .title-row{
+  margin-bottom: 5px;
+}
+
+.subtitle-row{
+  display: block;
+  font-size: 10px;
+  color: #414141;
+  margin-bottom: 20px;
+}
+
+.element{
+  display: inline-block;
+  width: 20vh;
+  margin: 0 10px;
+}
+
+.front{
+  background-size: contain;
+  width: 20vh;
+  height: 20vh;
+  filter: opacity(1);
+  transition: filter;
+  text-align: center;
+}
+
+.front span i{
+  display: none;
+  font-size: 30px;
+  line-height: 20vh;
+  color: white;
 }
 
 
+.front:hover{
+  filter: opacity(0.5);
+}
 
+.front:hover i{
+  display: inline;
+}
 
+.title-album, .subtitle-album{
+  display: block;
+  text-align: center;
+
+}
+
+.subtitle-album{
+  font-size: 10px;
+}
+
+.circle{
+  border-radius: 50%;
+}
+
+/* *******************************copertine-album************ */
+.heavy-metal{
+  background-image: url(../img/metal_lifting.jpg);
+}
+
+.stranger-things{
+  background-image: url(../img/stranger.jpeg);
+}
+
+.quite-place{
+  background-image: url(../img/aquietplace.jpeg);
+}
+
+.split{
+  background-image: url(../img/split.jpeg);
+}
+
+.wellness{
+  background-image: url(../img/cure.jpeg);
+}
+
+.sinister{
+  background-image: url(../img/sinister.jpeg);
+}
 
 /* ***************************FOOTER*********** */
 footer{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  overflow: hidden;
   height: 80px;
   width: 100%;
   background-color: #282828;
@@ -251,10 +347,14 @@ footer{
   color: #414141;
 }
 
-footer i{
+.footer-left i{
   color: #414141;
   font-size: 14px;
   margin-left: 10px;
+  cursor: pointer;
+}
+.footer-left i:hover{
+  color: white;
 }
 
 /* **************FOOTER-CENTRAL*********** */
@@ -274,10 +374,16 @@ footer i{
   font-size: 20px;
   margin: 20px ;
   color: white;
+  transition: color 0.1s linear;
 }
 
 .footer-central-top ul li .play{
   font-size: 30px;
+}
+
+
+.footer-central-top ul li i:hover{
+  color: green;
 }
 
 .footer-central-down{
@@ -285,11 +391,39 @@ footer i{
   align-items: center;
 }
 
-.riprod-line{
+.riprod-line.front{
+  display: block;
   height: 2px;
   width: 200px;
+  background-color: #414141;
+  margin: 0 20px 5px 20px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.riprod-line.front:hover .riprod-line.over{
+  display: inline-block;
+}
+.riprod-line.front:hover .ball{
+  display: inline-block;
+}
+
+.riprod-line.over, .ball{
+  display: none;
+}
+
+.riprod-line.over{
+  height: 3px;
+  width: 150px;
   background-color: white;
   margin: 0 20px 5px 20px;
+  border-radius: 2px;
+}
+
+.ball{
+  font-size: 40px;
+  margin-bottom: 25px;
+  margin-left: -22px;
 }
 
 
@@ -297,6 +431,7 @@ footer i{
 
 .footer-right i{
   color: white;
+  margin: 5px;
   cursor: pointer;
 }
 
@@ -306,10 +441,11 @@ footer i{
 }
 
 .footer-right .riprod-line{
+  height: 2px;
+  background-color: #414141;
   width: 70px;
   margin: 10px;
-  
- 
+  cursor: pointer;
 }
 
 
