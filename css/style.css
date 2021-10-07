@@ -135,6 +135,7 @@ ul li:hover, .aside-bottom>:first-child:hover{
 .playlist-aside{
   overflow: auto;
   height: calc(100% - 200px);
+  margin-top: 20px;
 }
 .span-aside{
   text-transform: uppercase;
@@ -144,8 +145,6 @@ ul li:hover, .aside-bottom>:first-child:hover{
 .playlist-aside ul li {
   padding: 5px 0;
 }
-
-
 
 .select i{
   font-size: 40px;
@@ -166,12 +165,11 @@ ul li:hover, .aside-bottom>:first-child:hover{
   color: white;
 }
 
-
 .aside-bottom{
   overflow: hidden;
   height: 80px;
-
 }
+
 .aside-bottom img{
   filter: opacity(0.5);
   width: 20px;
@@ -181,7 +179,12 @@ ul li:hover, .aside-bottom>:first-child:hover{
 
 .aside-bottom span{
   padding: 10px 0;
+}
+
+.aside-bottom img:hover, .aside-bottom span:hover {
   cursor: pointer;
+  filter: opacity(1);
+  color: white;
 }
 
 .line{
