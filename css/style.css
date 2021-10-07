@@ -78,10 +78,15 @@ aside, .content{
   line-height: 50px;
 }
 
-.logo img{
+.big-logo{
   width: 60%;
   cursor: pointer;
   height: 50px;
+}
+
+.small-logo{
+  width: 30px;
+  display: none;
 }
 
 ul{
@@ -161,10 +166,6 @@ ul li:hover, .aside-bottom>:first-child:hover{
   color: white;
 }
 
-/* .aside-top-central{
-  height: calc(100% - 80px);
-  min-height: 430px;
-} */
 
 .aside-bottom{
   overflow: hidden;
@@ -203,7 +204,7 @@ ul li:hover, .aside-bottom>:first-child:hover{
 }
 
 .content-music ul li{
-  /* padding-top: 50px; */
+  font-size: 14px;
   text-transform: uppercase;
   list-style: none;
   display: inline-block;
@@ -249,8 +250,8 @@ ul li:hover, .aside-bottom>:first-child:hover{
 
 .element{
   display: inline-block;
-  width: 13%;
-  margin: 0 2px;
+  width: 15%;
+  margin: 0 2px 5px 0;
 }
 
 .img-album{
@@ -402,7 +403,7 @@ footer{
   height: 2px;
   width: 200px;
   background-color: #414141;
-  margin: 0 20px 5px 20px;
+  margin: 0 20px;
   border-radius: 2px;
   cursor: pointer;
 }
@@ -454,6 +455,74 @@ footer{
   cursor: pointer;
 }
 
+
+/* ****************************media query********/
+
+@media screen and (max-width: 768px){
+
+  .content-music ul li {
+    font-size: 11px;
+    margin: 5px;
+    padding-top: 15px;
+  }
+
+  .element{
+    width: 30%;
+  }
+
+}
+
+
+@media screen and (max-width: 600px){
+
+  .content-music ul li {
+    font-size: 10px;
+  }
+
+  .element{
+    width: 45%;
+  }
+
+  .big-logo{
+    display: none;
+  }
+  
+  .small-logo{
+    display: inline-block;
+    margin-top: 8px;
+    margin-bottom: 4px;
+  }
+
+  .aside-top ul span, .playlist-aside, .aside-bottom span, .line{
+    display: none;
+  }
+
+  .aside-bottom img{
+    display: block;
+  }
+
+  .user{
+    margin: 25px 0;
+  }
+
+  aside{
+    width: 50px;
+  }
+
+  .call-to-action, .title-content-music, .row{
+    width: calc(100% - 50px);
+  }
+
+  .row{
+    margin: 0 auto;
+  }
+
+ 
+
+
+  
+
+}
 
 
 
