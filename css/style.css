@@ -30,7 +30,6 @@ body{
   top: 0;
   right: 0;
   z-index: 500;
-  display: hidden;
   width: calc(100% - 200px);
   height: 50px;
   text-align: right;
@@ -200,13 +199,11 @@ ul li:hover, .aside-bottom>:first-child:hover{
 }
 
 .title-content-music{
-  overflow: hidden;
-  height: 85px;
   width: calc(100vw - 200px);
 }
 
 .content-music ul li{
-  padding-top: 50px;
+  /* padding-top: 50px; */
   text-transform: uppercase;
   list-style: none;
   display: inline-block;
@@ -216,6 +213,7 @@ ul li:hover, .aside-bottom>:first-child:hover{
 
 .content-music ul{
   text-align: center;
+  padding-top: 50px;
 }
 
 .content-music ul li:hover{
@@ -229,6 +227,7 @@ ul li:hover, .aside-bottom>:first-child:hover{
 /* **************row**************** */
 .row{
   margin: 10px 20px;
+  width: calc(100% - 200px);
 }
 
 .row p{
@@ -250,34 +249,73 @@ ul li:hover, .aside-bottom>:first-child:hover{
 
 .element{
   display: inline-block;
-  width: 20vh;
-  margin: 0 10px;
+  width: 13%;
+  margin: 0 2px;
 }
 
-.front{
-  background-size: contain;
+.img-album{
+  width:100%;
+  height: 100%;
+  position: relative;
+}
+
+.img-album img{
+  width: 100%;
+  filter: opacity(1);
+}
+
+.img-album img:hover{
+  filter: opacity(0.5);
+}
+
+.overlay{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* display: none; */
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+ 
+} 
+
+.overlay i{
+  font-size: 40px;
+  color: white;
+  margin-top: 50;
+ 
+}
+
+.img-album:hover .overlay{
+  display: inline-block;
+}
+
+/* .front{
+  /* background-size: contain;
   width: 20vh;
-  height: 20vh;
+  height: 20vh; */
   filter: opacity(1);
   transition: filter;
-  text-align: center;
-}
+  /* text-align: center; */
+} */
 
-.front span i{
+/* .front span i{
   display: none;
   font-size: 30px;
-  line-height: 20vh;
+  /* line-height: 20vh; */
   color: white;
-}
+} */
 
 
-.front:hover{
+/* .front:hover{
   filter: opacity(0.5);
 }
 
 .front:hover i{
   display: inline;
-}
+} */
 
 .title-album, .subtitle-album{
   display: block;
@@ -294,7 +332,23 @@ ul li:hover, .aside-bottom>:first-child:hover{
 }
 
 /* *******************************copertine-album************ */
-.heavy-metal{
+
+.front{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* .heavy-metal{
   background-image: url(../img/metal_lifting.jpg);
 }
 
@@ -316,7 +370,7 @@ ul li:hover, .aside-bottom>:first-child:hover{
 
 .sinister{
   background-image: url(../img/sinister.jpeg);
-}
+} */
 
 /* ***************************FOOTER*********** */
 footer{
