@@ -256,10 +256,11 @@ ul li:hover, .aside-bottom>:first-child:hover{
 .img-album{
   width:100%;
   height: 100%;
-  position: relative;
+  
 }
 
 .img-album img{
+  position: relative;
   width: 100%;
   filter: opacity(1);
 }
@@ -267,55 +268,6 @@ ul li:hover, .aside-bottom>:first-child:hover{
 .img-album img:hover{
   filter: opacity(0.5);
 }
-
-.overlay{
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  /* display: none; */
-  text-align: center;
-  position: absolute;
-  top: 0;
-  left: 0;
- 
-} 
-
-.overlay i{
-  font-size: 40px;
-  color: white;
-  margin-top: 50;
- 
-}
-
-.img-album:hover .overlay{
-  display: inline-block;
-}
-
-/* .front{
-  /* background-size: contain;
-  width: 20vh;
-  height: 20vh; */
-  filter: opacity(1);
-  transition: filter;
-  /* text-align: center; */
-} */
-
-/* .front span i{
-  display: none;
-  font-size: 30px;
-  /* line-height: 20vh; */
-  color: white;
-} */
-
-
-/* .front:hover{
-  filter: opacity(0.5);
-}
-
-.front:hover i{
-  display: inline;
-} */
 
 .title-album, .subtitle-album{
   display: block;
